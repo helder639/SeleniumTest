@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: LoginTest
+Test set: ProductsTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.034 s - in LoginTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 15.269 s - in ProductsTest

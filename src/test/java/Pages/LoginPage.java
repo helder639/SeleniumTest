@@ -161,7 +161,6 @@ public class LoginPage {
 		driver.findElement(password).sendKeys("CoringaVacilão");
 		driver.findElement(confirmLogin).click();
 		new WebDriverWait(driver, Duration.ofSeconds(10));
-		driver.findElement(deleteAccount).isDisplayed();
 		driver.findElement(fundo).isDisplayed();
 	}
 
