@@ -57,7 +57,7 @@ public class LoginTest {
     }
     @Disabled
     @Test
-    public void testUserLogin() { //pode aparecer erro mas está funcionando
+    public void testUserLogin() { //pode aparecer erro mas está funcionando, repita o código
         WebDriverManager.chromedriver().setup();
         System.out.println("Abrindo navegador...");
         ChromeDriver driver = new ChromeDriver();
