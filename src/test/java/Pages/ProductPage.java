@@ -52,6 +52,21 @@ public class ProductPage {
 	private By viewWomanProduct = By.cssSelector("[href='/product_details/4']");
 	private By addButtonInView = By.cssSelector("[type='button']");
 	private By dressView = By.cssSelector("[href='/product_details/8']");
+	private By menPage = By.cssSelector("[href='#Men']");
+	private By categTshirt = By.cssSelector("[href='/category_products/3']");
+	private By categJeans = By.cssSelector("[href='/category_products/6']");
+	private By addP31 = By.cssSelector("[data-product-id='31']");
+	private By viewMenProductTshirt = By.cssSelector("[href='/product_details/43']");
+	private By addP33 = By.cssSelector("[data-product-id='33']");
+	private By addP35 = By.cssSelector("[data-product-id='35']");
+	private By addP37 = By.cssSelector("[data-product-id='37']");
+	private By kidsPage = By.cssSelector("[href='#Kids']");
+	private By categKDress = By.cssSelector("[href='/category_products/4']");
+	private By categTS = By.cssSelector("[href='/category_products/5']");
+	private By addP16 = By.cssSelector("[data-product-id='16']");
+	private By addP22 = By.cssSelector("[data-product-id='22']");
+	private By addP13 = By.cssSelector("[data-product-id='13']");
+	private By viewKidsProduct = By.cssSelector("[href='/product_details/15']");
 	
 
 	public void justViewProduct(){
@@ -182,6 +197,77 @@ public class ProductPage {
 		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement specificButton3 = wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
 		specificButton3.click();
+	}
+
+	public void selectMenPage(){
+		driver.findElement(menPage).click();
+		WebElement element = driver.findElement(categTshirt);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+		driver.findElement(addP2).click();
+		driver.findElement(addedMessage).isDisplayed();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton.click();
+		driver.findElement(addP31).click();
+		driver.findElement(addedMessage).isDisplayed();
+		WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton0 = wait0.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton0.click();
+		driver.findElement(viewMenProductTshirt).click();
+		driver.findElement(quantity).clear();
+		driver.findElement(quantity).sendKeys("2");
+		driver.findElement(addButtonInView).click();
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton1 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton1.click();
+		driver.findElement(menPage).click();
+		WebElement element1 = driver.findElement(categJeans);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element1);
+		driver.findElement(addP33).click();
+		driver.findElement(addedMessage).isDisplayed();
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton2 = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton2.click();
+		driver.findElement(addP35).click();
+		driver.findElement(addedMessage).isDisplayed();
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton3 = wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton3.click();
+		driver.findElement(addP37).click();
+		driver.findElement(addedMessage).isDisplayed();
+		WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton4 = wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton4.click();
+	}
+
+	public void selectKidsPage(){
+		driver.findElement(kidsPage);
+		WebElement element = driver.findElement(categKDress);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+		driver.findElement(addP16).click();
+		driver.findElement(addedMessage).isDisplayed();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton.click();
+		driver.findElement(addP22).click();
+		driver.findElement(addedMessage).isDisplayed();
+		WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton0 = wait0.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton0.click();
+		WebElement element0 = driver.findElement(categTS);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element0);
+		driver.findElement(addP13).click();
+		driver.findElement(addedMessage).isDisplayed();
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton1 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton1.click();
+		driver.findElement(viewKidsProduct).click();
+		driver.findElement(quantity).clear();
+		driver.findElement(quantity).sendKeys("3");
+		driver.findElement(addButtonInView).click();
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement specificButton2 = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue Shopping']")));
+		specificButton2.click();
 	}
 
 }

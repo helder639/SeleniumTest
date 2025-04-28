@@ -78,7 +78,7 @@ public class ProductsTest {
             driver.quit();
         }
     }
-
+    @Disabled
     @Test
     public void testBuyWomenPage(){
         WebDriverManager.chromedriver().setup();
@@ -95,7 +95,47 @@ public class ProductsTest {
             productPage.confirmPurchase();
             
         } finally {
-            //driver.quit();
+            driver.quit();
+        }
+    }
+    @Disabled
+    @Test
+    public void testBuyMenPage(){
+        WebDriverManager.chromedriver().setup();
+        System.out.println("Abrindo navegador...");
+        ChromeDriver driver = new ChromeDriver();
+        try {
+            ProductPage productPage = new ProductPage(driver);
+            LoginPage loginPage = new LoginPage(driver);
+            driver.get("https://automationexercise.com/");
+            loginPage.sucessLogin();
+            productPage.selectMenPage();
+            productPage.buyWithLogin();
+            productPage.payment();
+            productPage.confirmPurchase();
+            
+        } finally {
+            driver.quit();
+        }
+    }
+
+    @Test
+    public void testBuyKidsPage(){
+        WebDriverManager.chromedriver().setup();
+        System.out.println("Abrindo navegador...");
+        ChromeDriver driver = new ChromeDriver();
+        try {
+            ProductPage productPage = new ProductPage(driver);
+            LoginPage loginPage = new LoginPage(driver);
+            driver.get("https://automationexercise.com/");
+            loginPage.sucessLogin();
+            productPage.selectKidsPage();
+            productPage.buyWithLogin();
+            productPage.payment();
+            productPage.confirmPurchase();
+            
+        } finally {
+            driver.quit();
         }
     }
 
