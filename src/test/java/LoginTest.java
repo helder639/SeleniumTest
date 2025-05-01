@@ -1,4 +1,4 @@
-/*import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import Pages.LoginPage;
@@ -78,4 +78,4 @@ public class LoginTest {
             driver.quit();
         }
     }
-}*/
+}
