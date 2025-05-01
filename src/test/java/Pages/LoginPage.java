@@ -46,6 +46,7 @@ public class LoginPage {
 	private By alertMessage = By.cssSelector("[style='color: red;']");
 	private By deleteAccount = By.cssSelector("[href='/delete_account']");
 	private By fundo = By.cssSelector("#slider-carousel");
+	private By messageDelete = By.cssSelector("[data-qa='account-deleted']");
 	
 	public void singUpNewUser(String username, String email) {
 		driver.findElement(loginButton).click();
@@ -162,6 +163,12 @@ public class LoginPage {
 		driver.findElement(confirmLogin).click();
 		new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.findElement(fundo).isDisplayed();
+	}
+
+	public void delete(){
+		driver.findElement(deleteAccount).click();
+		driver.findElement(messageDelete).isDisplayed();
+		driver.findElement(continueButton);
 	}
 
 }

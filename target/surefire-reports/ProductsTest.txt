@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ProductsTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 19.371 s - in ProductsTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 114.89 s - in ProductsTest

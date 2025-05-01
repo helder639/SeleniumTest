@@ -3,11 +3,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import Pages.LoginPage;
 import Pages.ProductPage;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Disabled;
 
 public class ProductsTest {
-    @Disabled
+    
     @Test
     public void testViewProduct() {
         WebDriverManager.chromedriver().setup();
@@ -22,7 +21,7 @@ public class ProductsTest {
             driver.quit();
         }
     }
-    @Disabled
+    
     @Test
     public void testaddToCart() {
         WebDriverManager.chromedriver().setup();
@@ -37,7 +36,7 @@ public class ProductsTest {
             driver.quit();
         }
     }
-    @Disabled
+    
     @Test
     public void testBuyWithoutLogin(){
         WebDriverManager.chromedriver().setup();
@@ -78,7 +77,7 @@ public class ProductsTest {
             driver.quit();
         }
     }
-    @Disabled
+    
     @Test
     public void testBuyWomenPage(){
         WebDriverManager.chromedriver().setup();
@@ -98,7 +97,7 @@ public class ProductsTest {
             driver.quit();
         }
     }
-    @Disabled
+    
     @Test
     public void testBuyMenPage(){
         WebDriverManager.chromedriver().setup();
@@ -118,7 +117,7 @@ public class ProductsTest {
             driver.quit();
         }
     }
-
+    
     @Test
     public void testBuyKidsPage(){
         WebDriverManager.chromedriver().setup();
@@ -138,5 +137,26 @@ public class ProductsTest {
             driver.quit();
         }
     }
-
+    
+    @Test
+    public void testBrandsProducts(){
+        WebDriverManager.chromedriver().setup();
+        System.out.println("Abrindo navegador...");
+        ChromeDriver driver = new ChromeDriver();
+        try {
+            ProductPage productPage = new ProductPage(driver);
+            driver.get("https://automationexercise.com/");
+            productPage.brandPolo();
+            productPage.brandHM();
+            productPage.brandMadame();
+            productPage.brandHarbour();
+            productPage.brandBabyHug();
+            productPage.brandAllen();
+            productPage.brandKookie();
+            productPage.brandBiba();
+            
+        } finally {
+            driver.quit();
+        }
+    }
 }

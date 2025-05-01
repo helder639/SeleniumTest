@@ -18,7 +18,6 @@ public class ProductPage {
 	}
 
 	private By homeButton = By.cssSelector("[style='color: orange;']");
-	private By menuButton = By.cssSelector("[src='/static/images/home/logo.png']");
 	private By productsButton = By.cssSelector("[href='/products']");
 	private By quantity = By.cssSelector("[name='quantity']");
 	private By addedMessage = By.cssSelector(".modal-title");
@@ -29,7 +28,6 @@ public class ProductPage {
 	private By addP2 = By.cssSelector("[data-product-id='2']");
 	private By addP3 = By.cssSelector("[data-product-id='3']");
 	private By addP4 = By.cssSelector("[data-product-id='4']");
-	private By addP38 = By.cssSelector("[data-product-id='38']");
 	private By addP41 = By.cssSelector("[data-product-id='41']");
 	private By checkoutButton = By.cssSelector(".check_out");
 	private By delevery = By.cssSelector("#address_delivery");
@@ -67,6 +65,15 @@ public class ProductPage {
 	private By addP22 = By.cssSelector("[data-product-id='22']");
 	private By addP13 = By.cssSelector("[data-product-id='13']");
 	private By viewKidsProduct = By.cssSelector("[href='/product_details/15']");
+	private By poloButton = By.cssSelector("[href='/brand_products/Polo']");
+	private By hmButton = By.cssSelector("[href='/brand_products/H&M']");
+	private By madameButton = By.cssSelector("[href='/brand_products/Madame']");
+	private By harbourButton = By.cssSelector("[href='/brand_products/Mast & Harbour']");
+	private By babyhugButton = By.cssSelector("[href='/brand_products/Babyhug']");
+	private By allenButton = By.cssSelector("[href='/brand_products/Allen Solly Junior']");
+	private By kookieButton = By.cssSelector("[href='/brand_products/Kookie Kids']");
+	private By bibaButton = By.cssSelector("[href='/brand_products/Biba']");
+	private By productsBrand = By.cssSelector(".product-overlay");
 	
 
 	public void justViewProduct(){
@@ -96,7 +103,7 @@ public class ProductPage {
 		driver.findElement(addedMessage).isDisplayed();
 		WebElement specificButtoncart2 = driver.findElement(By.xpath("(//a[@href='/view_cart'])[1]"));
 		specificButtoncart2.click();
-		List<WebElement> imagElements = driver.findElements(productsAdded);
+		driver.findElements(productsAdded);
 	}
 
 	public void selectSomeProdutcs(){
@@ -270,5 +277,148 @@ public class ProductPage {
 		specificButton2.click();
 	}
 
+	public void brandPolo(){
+		driver.findElement(poloButton).click();
+		driver.getPageSource().contains("Brand - Polo Products");
+		List<WebElement> elementos = driver.findElements(productsBrand);
+		boolean algumVisivel = false;
+		for (WebElement elemento : elementos) {
+			if (elemento.isDisplayed()) {
+				algumVisivel = true;
+				break;
+			}
+		}
+		if (algumVisivel) {
+			System.out.println("Produtos Polo visiveis na página");
+		} else {
+			System.out.println("Nenhum elemento está visível");
+		}	
+	}
+
+	public void brandHM(){
+		driver.findElement(hmButton).click();
+		driver.getPageSource().contains("Brand - H&M Products");
+		List<WebElement> elementos = driver.findElements(productsBrand);
+		boolean algumVisivel = false;
+		for (WebElement elemento : elementos){
+			if(elemento.isDisplayed()){
+				algumVisivel =true;
+				break;
+			}
+		}
+		if(algumVisivel){
+			System.out.println("Produtos H&M visiveis na página");
+		}else {
+			System.out.println("Nenhum produto está visível");
+		}
+	}
+
+	public void brandMadame(){
+		driver.findElement(madameButton).click();
+		driver.getPageSource().contains("Brand - Madame Products");
+		List<WebElement> elementos = driver.findElements(productsBrand);
+		boolean algumVisivel = false;
+		for (WebElement elemento : elementos){
+			if(elemento.isDisplayed()){
+				algumVisivel =true;
+				break;
+			}
+		}
+		if(algumVisivel){
+			System.out.println("Produtos Madame visiveis na página");
+		}else {
+			System.out.println("Nenhum produto está visível");
+		}
+	}
+
+	public void brandHarbour(){
+		driver.findElement(harbourButton).click();
+		driver.getPageSource().contains("Brand - Mast & Harbour Products");
+		List<WebElement> elementos = driver.findElements(productsBrand);
+		boolean algumVisivel = false;
+		for (WebElement elemento : elementos){
+			if(elemento.isDisplayed()){
+				algumVisivel =true;
+				break;
+			}
+		}
+		if(algumVisivel){
+			System.out.println("Produtos Mast & Harbour visiveis na página");
+		}else {
+			System.out.println("Nenhum produto está visível");
+		}
+	}
+
+	public void brandBabyHug(){
+		driver.findElement(babyhugButton).click();
+		driver.getPageSource().contains("Brand - Babyhug Products");
+		List<WebElement> elementos = driver.findElements(productsBrand);
+		boolean algumVisivel = false;
+		for (WebElement elemento : elementos){
+			if(elemento.isDisplayed()){
+				algumVisivel =true;
+				break;
+			}
+		}
+		if(algumVisivel){
+			System.out.println("Produtos Babyhug visiveis na página");
+		}else {
+			System.out.println("Nenhum produto está visível");
+		}
+	}
+
+	public void brandAllen(){
+		driver.findElement(allenButton).click();
+		driver.getPageSource().contains("Brand - Allen Solly Junior Products");
+		List<WebElement> elementos = driver.findElements(productsBrand);
+		boolean algumVisivel = false;
+		for (WebElement elemento : elementos){
+			if(elemento.isDisplayed()){
+				algumVisivel =true;
+				break;
+			}
+		}
+		if(algumVisivel){
+			System.out.println("Produtos Allen Solly Junior visiveis na página");
+		}else {
+			System.out.println("Nenhum produto está visível");
+		}
+	}
+
+	public void brandKookie(){
+		driver.findElement(kookieButton).click();
+		driver.getPageSource().contains("Brand - Kookie Kids Products");
+		List<WebElement> elementos = driver.findElements(productsBrand);
+		boolean algumVisivel = false;
+		for (WebElement elemento : elementos){
+			if(elemento.isDisplayed()){
+				algumVisivel =true;
+				break;
+			}
+		}
+		if(algumVisivel){
+			System.out.println("Produtos Kookie Kids visiveis na página");
+		}else {
+			System.out.println("Nenhum produto está visível");
+		}
+	}
+
+	public void brandBiba(){
+		driver.findElement(bibaButton).click();
+		driver.getPageSource().contains("Brand - Biba Products");
+		List<WebElement> elementos = driver.findElements(productsBrand);
+		boolean algumVisivel = false;
+		for (WebElement elemento : elementos){
+			if(elemento.isDisplayed()){
+				algumVisivel =true;
+				break;
+			}
+		}
+		if(algumVisivel){
+			System.out.println("Produtos Biba visiveis na página");
+		}else {
+			System.out.println("Nenhum produto está visível");
+		}
+	}
 }
 
